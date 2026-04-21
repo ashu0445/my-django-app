@@ -22,3 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),   # ✅ admin
     path('', include('student.urls')), # ✅ app urls
 ]
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),   # 👈 ये जरूरी है
+]

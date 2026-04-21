@@ -65,3 +65,8 @@ def dashboard(request):
     return render(request, 'dashboard.html', {
         'name': request.session.get('user_name')
     })
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
